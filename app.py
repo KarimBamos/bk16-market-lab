@@ -351,10 +351,10 @@ def build_features(df_price, df_macro, target_horizon, base_threshold, ma_fast, 
     df['VIX_Level'] = df['VIXCLS']
     df['VIX_Momentum'] = df['VIXCLS'].pct_change(min(5, ma_fast)).fillna(0)
     
-    df['CPI_YoY'] = df['CPIAUCSL'].pct_change(12).fillna(method='bfill') * 100
-    df['PPI_YoY'] = df['PPIACO'].pct_change(12).fillna(method='bfill') * 100
-    df['Core_PCE'] = df['PCEPI'].pct_change(12).fillna(method='bfill') * 100
-    df['NFP_Change'] = df['PAYEMS'].diff(1).fillna(method='bfill')
+    df['CPI_YoY'] = df['CPIAUCSL'].pct_change(12).bfill() * 100
+    df['PPI_YoY'] = df['PPIACO'].pct_change(12).bfill() * 100
+    df['Core_PCE'] = df['PCEPI'].pct_change(12).bfill() * 100
+    df['NFP_Change'] = df['PAYEMS'].diff(1).bfill()
 
     scaled_threshold = base_threshold * np.sqrt(target_horizon)
 
