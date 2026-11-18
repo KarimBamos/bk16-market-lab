@@ -117,6 +117,21 @@ st.markdown("""
         border: 3px solid #10b981;
         box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
     }
+    /* Style professionnel pour le Footer en bas à gauche */
+    .footer-bk16 {
+        position: fixed;
+        right: 20px;
+        bottom: 10px;
+        font-size: 0.75rem;
+        color: #64748b;
+        background-color: rgba(11, 15, 25, 0.85);
+        padding: 6px 12px;
+        border-radius: 6px;
+        border: 1px solid #1e293b;
+        z-index: 99999;
+        letter-spacing: 0.5px;
+        font-family: monospace;
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -695,3 +710,7 @@ elif page == "🔐 Audit & Modèles (Sécurisé)":
             margin=dict(l=20, r=20, t=40, b=20)
         )
         st.plotly_chart(fig_imp, use_container_width=True)
+# ==============================================================================
+# FOOTER GLOBAL (Fixé en bas à gauche sur toutes les pages)
+# ==============================================================================
+st.markdown('<div class="footer-bk16">⚡ Engineered by <b>BK16 QUANT LAB</b></div>', unsafe_allow_html=True)
