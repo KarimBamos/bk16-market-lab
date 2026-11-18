@@ -22,6 +22,7 @@ st.set_page_config(
 )
 
 # --- DESIGN INSTITUTIONNEL (CSS PRO & ÉLÉMENTS FIXES) ---
+# --- DESIGN INSTITUTIONNEL (CSS PRO & ÉLÉMENTS FIXES) ---
 st.markdown("""
 <style>
     /* Forcer le fond sombre institutionnel sur toute l'application */
@@ -60,14 +61,15 @@ st.markdown("""
         margin-bottom: 10px;
     }
 
-    /* Bandeau défilant FIXE tout en haut de l'écran */
+    /* Bandeau défilant FIXE ajusté pour s'arrêter au bord de la sidebar */
     .fixed-ticker {
         position: fixed;
         top: 0;
-        left: 0;
-        width: 90%;
+        left: 20rem; /* Aligné exactement après la largeur par défaut de la barre latérale */
+        width: calc(100% - 20rem); /* Réduit la largeur totale pour compenser */
         background-color: #111827;
         border-bottom: 2px solid #38bdf8;
+        border-left: 1px solid #1e293b; /* Petite bordure esthétique pour la jointure */
         padding: 10px 0;
         z-index: 999999;
         overflow: hidden;
