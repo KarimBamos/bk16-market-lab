@@ -65,8 +65,8 @@ st.markdown("""
     .fixed-ticker {
         position: fixed;
         top: 0;
-        left: 20rem; /* Aligné exactement après la largeur par défaut de la barre latérale */
-        width: calc(100% - 20rem); /* Réduit la largeur totale pour compenser */
+        left: 21rem; /* Aligné exactement après la largeur par défaut de la barre latérale */
+        width: calc(100% - 22rem); /* Réduit la largeur totale pour compenser */
         background-color: #111827;
         border-bottom: 2px solid #38bdf8;
         border-left: 1px solid #1e293b; /* Petite bordure esthétique pour la jointure */
